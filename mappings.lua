@@ -33,7 +33,9 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
-    ["<leader>r"] =  { ":AstroReload<cr>", desc = "Reloads config" },
+    -- ["<leader>r"] =  { ":AstroReload<cr>", desc = "Reloads config" },
+    ["<leader>r"] =  { ":source /home/loki/.config/nvim/init.lua<cr>", desc = "Reloads nvim" },
+
     ["o"] =  { 'o<Esc>0"_D', desc = "Reloads config" },
   },
   t = {

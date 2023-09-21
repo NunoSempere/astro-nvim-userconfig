@@ -9,6 +9,7 @@ return {
     require('onenord').setup({
       disable = {
         background = true, -- Disable setting the background color
+        cursorline = true, -- Disable the cursorline
       },
     })
       vim.cmd([[colorscheme oxocarbon]])
