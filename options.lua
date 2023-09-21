@@ -2,13 +2,17 @@
 return {
   opt = {
     -- set to true or false etc.
-    relativenumber = true, -- sets vim.opt.relativenumber
-    number = true, -- sets vim.opt.number
+    relativenumber = false, -- sets vim.opt.relativenumber
+    number = false, -- sets vim.opt.number
     spell = false, -- sets vim.opt.spell
-    signcolumn = "auto", -- sets vim.opt.signcolumn to auto
-    wrap = false, -- sets vim.opt.wrap
-    showtabline = 0;
-    laststatus = 0;
+    signcolumn = "no", -- sets vim.opt.signcolumn to no | auto
+    wrap = true, -- sets vim.opt.wrap
+    showtabline = 0,
+    laststatus = 0,
+    clipboard = "unnamedplus",
+    cmdheight = 0,
+    foldenable = false,
+    foldcolumn = "0",
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader

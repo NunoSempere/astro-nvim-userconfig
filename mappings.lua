@@ -6,6 +6,7 @@
 return {
   -- first key is the mode
   n = {
+    -- Note: leader is the space.
     -- second key is the lefthand side of the map
 
     -- navigate buffer tabs with `H` and `L`
@@ -32,6 +33,8 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    ["<leader>r"] =  { ":AstroReload<cr>", desc = "Reloads config" },
+    ["o"] =  { 'o<Esc>0"_D', desc = "Reloads config" },
   },
   t = {
     -- setting a mapping to false will disable it
