@@ -83,15 +83,14 @@ return {
     --     ["~/%.config/foo/.*"] = "fooscript",
     --   },
     -- }
-    local cmp_enabled = true
-    vim.api.nvim_create_user_command("ToggleAutoComplete", function()
-	    if cmp_enabled then
-		    require("cmp").setup.buffer({ enabled = false })
-		    cmp_enabled = false
-	    else
-		    require("cmp").setup.buffer({ enabled = true })
-		    cmp_enabled = true
-	    end
+
+    -- Define user commands for disabling and creating autocomplete
+    vim.api.nvim_create_user_command("DisableAutoComplete", function()
+		  require("cmp").setup.buffer({ enabled = false })
     end, {})
+    vim.api.nvim_create_user_command("EnableAutoComplete", function()
+		  require("cmp").setup.buffer({ enabled = false })
+    end, {})
+    vim.cmd[[ autocmd BufRead,BufNewFile /home/loki/Documents/core/em/diario/Diario.md  lua require("cmp").setup.buffer({ enabled = false }) ]]
   end,
 }
